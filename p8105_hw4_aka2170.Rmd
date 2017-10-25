@@ -14,4 +14,22 @@ library(janitor)
 library(DT)
 ```
 
+## Problem 1
+
+Project Lead:
+Collaborator: Ahlam
+
+
+## Problem 2
+
+Project Lead: Ahlam
+Collaborator: Yanelli
+
+
+```{r_pols}
+pols_data = read_csv("./fivethirtyeight_datasets/pols-month.csv") %>%
+  clean_names() %>%
+  mutate(date = lubridate::floor_date(mon,"month")) %>% 
+  mutate(president = ifelse(prez_gop == 1, "gop", "dem")) %>%
+  select(date, everything(),-mon, -prez_gop, -prez_dem)
 ```
