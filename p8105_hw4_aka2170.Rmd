@@ -1,0 +1,10 @@
+---
+title: "P8105_hw4_aka2170"
+author: "Ahlam Abuawad"
+date: "10/24/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"P8105_hw4_aka2170\"\nauthor: \"Ahlam Abuawad\"\ndate: \"10/24/2017\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n",
+    "created" : 1508901151244.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "32147704",
+    "id" : "9EAA7749",
+    "lastKnownWriteTime" : 1508901220,
+    "last_content_update" : 1508901220436,
+    "path" : "~/Documents/Columbia/Data Science I/p8105_hw4_aka2170/p8105_hw4_aka2170.Rmd",
+    "project_path" : "p8105_hw4_aka2170.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
