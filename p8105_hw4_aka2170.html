@@ -165,6 +165,16 @@ library(DT)</code></pre>
 ##   sen_dem = col_integer(),
 ##   rep_dem = col_integer()
 ## )</code></pre>
+<pre class="r"><code>gdp_data = read_csv(&quot;./fivethirtyeight_datasets/gdp.csv&quot;) %&gt;% 
+  clean_names() %&gt;%
+  mutate(date = lubridate::floor_date(date,&quot;month&quot;),
+          gdp = value) %&gt;% 
+  select(-value)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   DATE = col_date(format = &quot;&quot;),
+##   VALUE = col_character()
+## )</code></pre>
 </div>
 
 

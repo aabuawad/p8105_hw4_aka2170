@@ -33,3 +33,12 @@ pols_data = read_csv("./fivethirtyeight_datasets/pols-month.csv") %>%
   mutate(president = ifelse(prez_gop == 1, "gop", "dem")) %>%
   select(date, everything(),-mon, -prez_gop, -prez_dem)
 ```
+
+
+```{r_gdp}
+gdp_data = read_csv("./fivethirtyeight_datasets/gdp.csv") %>% 
+  clean_names() %>%
+  mutate(date = lubridate::floor_date(date,"month"),
+          gdp = value) %>% 
+  select(-value)
+```
