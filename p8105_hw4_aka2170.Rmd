@@ -1,6 +1,6 @@
 ---
 title: "P8105_hw4_aka2170"
-author: "Ahlam Abuawad"
+author: "Ahlam Abuawad and Yanelli Nunez"
 date: "10/25/2017"
 output: html_document
 ---
@@ -13,12 +13,6 @@ library(readxl)
 library(janitor)
 library(DT)
 ```
-
-## Problem 1
-
-Project Lead:
-Collaborator: Ahlam
-
 
 ## Problem 2
 
@@ -49,3 +43,21 @@ pols_gdp_data = left_join(pols_data, gdp_data)
 
 str(pols_gdp_data)
 ```
+
+## Pols_gdp Data visualization
+
+This plot shows the gdp change over time for each presidential party.
+
+```{r_pols_gdp_plot}
+pols_gdp_data %>% 
+  mutate(gdp = as.numeric(gdp), na = ".") %>%
+ggplot(aes(x = date, y = gdp, color = president)) + 
+  geom_point()+ geom_smooth(alpha = 0.3) +
+  labs(
+    x = "Date", 
+    y = "GDP Value", 
+title = "GDP Value Over Time for Each Presidential Party")
+```
+
+This plot shows that regardless of the president's political affiliation, the GDP value consistently increased from 1947 to 1980 reaching a peak in the 80s. Then, it consistently decreased after that. Overall, the GDP smooth line for democratic presidents is slightly above that one for republicans indicating that across time democratic presidents have achieved higher GDP values.  
+
