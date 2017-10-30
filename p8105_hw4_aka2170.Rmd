@@ -52,12 +52,13 @@ This plot shows the gdp change over time for each presidential party.
 pols_gdp_data %>% 
   mutate(gdp = as.numeric(gdp), na = ".") %>%
 ggplot(aes(x = date, y = gdp, color = president)) + 
-  geom_point()+ geom_smooth(alpha = 0.3) +
+  geom_point() +
   labs(
     x = "Date", 
     y = "GDP Value", 
 title = "GDP Value Over Time for Each Presidential Party")
 ```
 
-This plot shows that regardless of the president's political affiliation, the GDP value consistently increased from 1947 to 1980 reaching a peak in the 80s. Then, it consistently decreased after that. Overall, the GDP smooth line for democratic presidents is slightly above that one for republicans indicating that across time democratic presidents have achieved higher GDP values.  
+This plot shows that regardless of the president's political affiliation, the GDP value consistently increased from 1947 to 1980 reaching a peak in the 80s. Then, it consistently decreased until 1990. After that, it begins to plateau but there is a drastic dropped around 2010 with both the republican and democratic party involved.
+
 
